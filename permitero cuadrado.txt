@@ -1,0 +1,65 @@
+static void PerimetroDeUnCuadrado()
+
+{
+
+  double lado;
+
+  string s;
+
+  // Solicitar y validar la longitud del lado del cuadrado
+
+  while (true)
+
+  {
+
+    Console.Write("Ingrese la longitud del lado del cuadrado:");
+
+    string entrada = Console.ReadLine();
+
+
+
+    if (double.TryParse(entrada, out lado) && lado > 0)
+
+    {
+
+      double perimetro = 4 * lado;
+
+
+
+      Console.Write("El perímetro del cuadrado es: " + perimetro);
+
+
+
+      Console.ReadLine();
+
+      Console.Write("Ingrese s para salir:");
+
+      s = Console.ReadLine();
+
+      if (s == "s")
+
+          {
+
+        break; // Salir del bucle si la entrada es válida
+
+      }
+
+       
+
+    }
+
+    else
+
+    {
+
+      Console.WriteLine("Entrada no válida. Por favor, ingrese un número válido mayor que cero.");
+
+    }
+
+  }
+
+
+
+   
+
+}
